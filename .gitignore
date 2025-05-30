@@ -1,0 +1,15 @@
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+bin/
+obj/
+.vscode/
+*.nupkg
+packages/
+*.log
+*.tmp
+*.cache
+_ReSharper*/
+*.DotSettings.user

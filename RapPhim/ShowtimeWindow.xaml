@@ -1,0 +1,45 @@
+﻿<Window x:Class="RapPhim.ShowtimeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RapPhim"
+        mc:Ignorable="d"
+        Title="Showtime information" Height="400" Width="450" WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Top">
+            <Label Content="Showtime ID:"/>
+            <TextBox Name="txtShowtimeID" Margin="0,0,0,10" IsReadOnly="True" Background="#FFF"/>
+
+            <Label Content="Movie ID:"/>
+            <TextBox Name="txtMovieID" Margin="0,0,0,10" IsReadOnly="True" Background="#FFF" HorizontalAlignment="Stretch"/>
+
+            <Label Content="Date:"/>
+            <DatePicker Name="datePicker" Margin="0,0,0,10" />
+
+            <Label Content="Time:"/>
+            <TextBox Name="txtTime" Margin="0,0,0,10" HorizontalAlignment="Stretch"/>
+
+            <Label Content="Room:"/>
+            <ComboBox Name="cbRoom" Margin="0,0,0,10"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="Save"
+                    Background="LightGreen" BorderBrush="DarkGreen" BorderThickness="2"
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Margin="10,0"
+                    Click="BtnSave_Click"/>
+            <Button Content="Cancel"
+                    Background="LightCoral" BorderBrush="DarkRed" BorderThickness="2"
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Margin="10,0"
+                    Click="BtnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
